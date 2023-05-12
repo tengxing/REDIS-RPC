@@ -1,0 +1,55 @@
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# IDEA
+/.idea/
+*.iml
+/target/
+target/
+
+# Eclipse
+/.settings/
+.project
+
+
+# TOMCAT
+logs
+nbproject
+output
+# Next line commented out, because test/webapp-virtual-library and
+# test/webapp-virtual-webapp use it:
+# target
+work
+build.properties
+mvn.properties
+.checkstyle
+.classpath
+.fbprefs
+.settings
+.idea
+*.ipr
+*.iws
+*.asc
+*.jj
+*.tmp
+/node_modules/
