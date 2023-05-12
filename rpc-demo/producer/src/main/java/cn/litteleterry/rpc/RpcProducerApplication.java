@@ -1,11 +1,10 @@
 package cn.litteleterry.rpc;
 
+import cn.litteleterry.rpc.annotation.EnableDiscoveryRpcClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.Import;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -14,8 +13,8 @@ import org.springframework.scripting.support.ResourceScriptSource;
 
 import java.util.Arrays;
 
+@EnableDiscoveryRpcClient
 @SpringBootApplication
-@Import(RpcServiceSubConsumer.class)
 public class RpcProducerApplication implements CommandLineRunner {
     @Autowired
     HelloService helloService;
@@ -40,9 +39,6 @@ public class RpcProducerApplication implements CommandLineRunner {
         //执行
         Object result = redisTemplate.execute(redisScript, Arrays.asList(new String[]{"*view*"}));
         System.out.println(result);
-
-
-
     }
 
     //@Test
@@ -54,3 +50,4 @@ public class RpcProducerApplication implements CommandLineRunner {
 //        helloService.hi();
     }
 }
+

@@ -1,16 +1,15 @@
 package cn.litteleterry.rpc;
 
+import cn.litteleterry.rpc.annotation.EnableRpcClients;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Import;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.PrimitiveIterator;
 
-@Import(RRemoteClientRegistery.class)
+@EnableRpcClients
 @SpringBootApplication
 @RestController
 public class RpcConsumerApplication implements CommandLineRunner {
@@ -24,7 +23,12 @@ public class RpcConsumerApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        System.out.println("======>"+helloService.hi("args"));
+        while (true){
+            System.out.println("======>"+helloService.hi("args"));
+            Thread.sleep(3000);
+            System.out.println("======>"+helloService.hello("terry","25"));
+            Thread.sleep(3000);
+        }
     }
 
     @RequestMapping("/hello")

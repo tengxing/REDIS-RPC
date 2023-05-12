@@ -53,3 +53,5 @@ mvn.properties
 *.jj
 *.tmp
 /node_modules/
+rpc-demo/consumer/src/main/resources/application.properties
+rpc-demo/producer/src/main/resources/application.properties

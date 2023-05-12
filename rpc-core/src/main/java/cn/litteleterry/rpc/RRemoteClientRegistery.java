@@ -1,5 +1,6 @@
 package cn.litteleterry.rpc;
 
+import cn.litteleterry.rpc.annotation.RRemoteClient;
 import org.reflections.Reflections;
 import org.springframework.beans.factory.config.BeanDefinitionHolder;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;

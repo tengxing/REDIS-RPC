@@ -5,7 +5,6 @@ import java.util.Objects;
 public class ServiceTopicMessage {
     private String serviceName;
     private String methodName;
-
     private String requestKey;
     private  Object[] args;
 

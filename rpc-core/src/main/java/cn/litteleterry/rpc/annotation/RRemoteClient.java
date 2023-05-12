@@ -1,4 +1,4 @@
-package cn.litteleterry.rpc;
+package cn.litteleterry.rpc.annotation;
 
 import org.springframework.stereotype.Service;
 
