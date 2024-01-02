@@ -1,7 +1,5 @@
 package cn.litteleterry.rpc.annotation;
 
-import org.springframework.stereotype.Service;
-
 import java.lang.annotation.*;
 
 

@@ -25,9 +25,9 @@ public class RpcConsumerApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
         while (true){
             System.out.println("======>"+helloService.hi("args"));
-            Thread.sleep(3000);
+            Thread.sleep(10000);
             System.out.println("======>"+helloService.hello("terry","25"));
-            Thread.sleep(3000);
+            Thread.sleep(10000);
         }
     }
 

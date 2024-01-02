@@ -7,7 +7,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.core.script.DefaultRedisScript;
 import org.springframework.scripting.support.ResourceScriptSource;
 
@@ -28,7 +27,7 @@ public class RpcProducerApplication implements CommandLineRunner {
         HelloService helloService = (HelloService)ApplicationContextAwareHolder.getBean("helloService");
 
 
-        RedisTemplate<String,String> redisTemplate = ApplicationContextAwareHolder.getBean(StringRedisTemplate.class);
+        RedisTemplate<String,String> redisTemplate = RedisTemplateUtil.getRedisTemplate();
 
         DefaultRedisScript redisScript = new DefaultRedisScript();
         //设置返回类型，这步必须要设置
